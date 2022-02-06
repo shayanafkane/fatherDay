@@ -1,11 +1,8 @@
+import RouterPage from "./components/Router";
 
 
 function App() {
-  return (
-    <div className="App">
-      <h1>shayan</h1>
-    </div>
-  );
+  return <RouterPage />;
 }
 
 export default App;
