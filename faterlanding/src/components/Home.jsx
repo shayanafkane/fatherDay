@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
+import Nav from './Nav';
 export default class Home extends Component {
   render() {
     return (
-        <div>
-            <h1>shayan</h1>
-        </div>
+      <div>
+        <Nav />
+      </div>
     );
   }
 }
