@@ -45,9 +45,10 @@ a:hover {
 }
 
 .hero {
-  height: 100vh;
+  height: 700px;
   width: 100%;
   background: url("https://res.cloudinary.com/dpzrxnav1/image/upload/v1644226675/fatherDay_gxsev2.jpg");
+  background-repeat: no-repeat;
 }
 
 .site-navbar {
@@ -632,7 +633,7 @@ a:hover {
     font-size: 70px;
     color: #8d3fd0;
   }
-  .boxTitle p{
+  .boxTitle p {
     font-size: 15px;
   }
   .fatherDayHappy {

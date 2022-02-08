@@ -23,6 +23,18 @@
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/jquery.sticky.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      addThousandsSeperator();
+    });
+
+    function addThousandsSeperator() {
+      var ekPrice = document.getElementsByClassName("ek-price");
+      for (var i = 0; i < ekPrice.length; i++) {
+        ekPrice[i].innerHTML = parseInt(ekPrice[i].innerHTML).toLocaleString('fa-IR');
+      }
+    }
+  </script>
 </body>
 
 </html>

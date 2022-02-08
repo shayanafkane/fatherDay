@@ -7,6 +7,7 @@ export default class Home extends Component {
     return (
       <div>
         <Nav />
+      
         <Slider1 />
       </div>
     );
