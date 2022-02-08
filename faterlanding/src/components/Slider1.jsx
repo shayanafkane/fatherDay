@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./assets/styles/Slider.css";
 export default class Slider1 extends Component {
     render() {
@@ -11,14 +11,20 @@ export default class Slider1 extends Component {
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
-                    centeredSlides={true}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination]}
-                    className="mySwiper"
+                    navigation={true}
+                    modules={[Navigation]}
+                    className="mySwiper px-4 py-4"
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
+
+                    <SwiperSlide className='SwiperTitle d-flex flex-column'>
+                        <a href="#" className='btnSliderTitle d-flex flex-column justify-content-center align-items-center'>
+                            <h2 className='mb-3'>انواع ساعت هوشمند</h2>
+                            <img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1644307861/pngfind.com-apple-watch-png-99752_paeaym.png" alt="" />
+                            <a href="#">مشاهده همه محصولات <i class="fas fa-arrow-left"></i></a>
+
+                        </a>
+                    </SwiperSlide>
+
                     <SwiperSlide>Slide 2</SwiperSlide>
                     <SwiperSlide>Slide 3</SwiperSlide>
                     <SwiperSlide>Slide 4</SwiperSlide>
