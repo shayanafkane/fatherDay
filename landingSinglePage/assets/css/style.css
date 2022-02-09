@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Lalezar";
+  src: url("../fonts/Lalezar-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IRYekan";
+  src: url("../fonts/iranyekanwebmedium.woff");
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lalezar";
+}
+.hero {
+  height: 700px;
+  width: 100%;
+  background: url("https://res.cloudinary.com/dpzrxnav1/image/upload/v1644323296/fatherDay2_dfeoxd.jpg");
+  background-repeat: no-repeat;
+}
+.boxTitle {
+  margin-right: 100px;
+}
+.fatherDayHappy {
+  font-size: 120px;
+  color: #0784d7;
+}
+.fatherDayTitle {
+  font-size: 120px;
+  color: #8d3fd0;
+}
+.boxTitle p {
+  font-family: "IRYekan";
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+.chevron {
+  position: absolute;
+  width: 2.1rem;
+  height: 0.48rem;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
+}
+.chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5);
+  }
+}
+.aroowDown {
+  margin-right: 185px;
+}
+.imgProduct img {
+  width: 300px;
+}
+.titleProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.titleProduct a {
+  font-family: "IRYekan";
+}
+.titleProduct h3 {
+  font-size: 40px;
+  color: rgb(226, 55, 55);
+}
+.titleProduct p {
+  font-family: "IRYekan";
+  font-size: 30px;
+  font-weight: 700;
+}
+.boxProduct {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1220px) {
+  .boxTitle {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    background: none;
+  }
+  .boxTitle {
+    justify-content: center;
+  }
+  .boxTitle p {
+    text-align: center;
+  }
+  .aroowDown {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .titleProduct {
+    justify-content: center;
+    align-items: center;
+  }
+  #btnProduct {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fatherDayHappy {
+    font-size: 90px;
+    color: #0784d7;
+  }
+  .site-navbar .site-logo {
+    float: none;
+    position: relative;
+  }
+  .fatherDayTitle {
+    font-size: 90px;
+    color: #8d3fd0;
+  }
+  .site-navbar img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .fatherDayTitle {
+    font-size: 70px;
+    color: #8d3fd0;
+  }
+  .boxTitle p {
+    font-size: 15px;
+  }
+  .fatherDayHappy {
+    font-size: 70px;
+    color: #0784d7;
+  }
+}
