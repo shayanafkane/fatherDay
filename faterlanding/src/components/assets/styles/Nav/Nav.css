@@ -589,7 +589,16 @@ a:hover {
 .aroowDown {
   margin-right: 185px;
 }
-
+.form-control {
+  width: 400px !important;
+  margin-bottom: 10px;
+  font-family: "IRYekan";
+}
+.boxForm button {
+  font-family: "IRYekan";
+  font-size: 16px;
+  height: 38px;
+}
 @media screen and (max-width: 1220px) {
   .boxTitle {
     margin-right: 0;
@@ -628,8 +637,14 @@ a:hover {
   .site-navbar img {
     width: 100px;
   }
+  .form-control {
+    width: 250px !important;
+    margin-bottom: 10px;
+    font-family: "IRYekan";
+  }
 }
 @media screen and (max-width: 400px) {
+ 
   .fatherDayTitle {
     font-size: 70px;
     color: #8d3fd0;

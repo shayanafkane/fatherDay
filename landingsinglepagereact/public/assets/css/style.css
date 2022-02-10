@@ -26,6 +26,15 @@ h5 {
 .boxTitle {
   margin-right: 100px;
 }
+.btnEnd {
+  display: block;
+  margin: 80px auto;
+  width: 300px;
+  padding: 15px 0;
+}
+
+.textLast {
+}
 .fatherDayHappy {
   font-size: 120px;
   color: #0784d7;
@@ -141,6 +150,7 @@ h5 {
   }
   .boxTitle p {
     text-align: center;
+    font-size: 16px;
   }
   .aroowDown {
     margin-right: 0;
@@ -149,7 +159,31 @@ h5 {
     display: flex;
   }
 }
+.logo {
+  position: absolute !important;
+}
 @media screen and (max-width: 768px) {
+  .boxTitle p {
+    font-family: "IRYekan";
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 100px;
+  }
+  .logo {
+    position: relative !important;
+    display: flex;
+    justify-content: center;
+  }
+  section.main {
+    /* transform: translateY(-235px); */
+  }
+  .hero {
+    justify-content: start !important;
+  }
+  .boxInput {
+    justify-content: center;
+    padding: 0 15px;
+  }
   .phoneBox,
   .smartWatchBox {
     order: 1;
