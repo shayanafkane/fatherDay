@@ -11,6 +11,7 @@
   border: 1px solid #e2e2e2;
   filter: blur(5px);
 }
+
 .product p {
   font-family: "IRYekan";
   color: #3d3d3d;
@@ -26,4 +27,10 @@
 }
 .imageProduct {
   width: 220px;
+}
+@media screen and (max-width: 992px) {
+  .boxForm {
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }

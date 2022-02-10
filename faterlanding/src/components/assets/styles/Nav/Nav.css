@@ -622,6 +622,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 600px) {
+  .boxTitle p{
+    font-size: 16px ;
+  }
   .fatherDayHappy {
     font-size: 90px;
     color: #0784d7;
@@ -641,6 +644,12 @@ a:hover {
     width: 250px !important;
     margin-bottom: 10px;
     font-family: "IRYekan";
+  }
+}
+@media screen and (max-width: 992px) {
+  .boxForm {
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 @media screen and (max-width: 400px) {

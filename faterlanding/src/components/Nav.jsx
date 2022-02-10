@@ -32,7 +32,7 @@ export default class Nav extends Component {
 
                             <div className="col-3">
                                 <div className="site-logo">
-                                    <a href="index.html" className="font-weight-bold"><img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1643462603/Logo_Text-4-2_atcrc1.png" width={'150px'} alt="" /></a>
+                                    <a href="https://etebarkala.com/" className="font-weight-bold"><img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1643462603/Logo_Text-4-2_atcrc1.png" width={'150px'} alt="" /></a>
                                 </div>
                             </div>
 
@@ -48,6 +48,7 @@ export default class Nav extends Component {
                                         <li><a href="#phone" className="nav-link">گوشی</a></li>
                                         <li><a href="#smartwatch" className="nav-link">ساعت هوشمند</a></li>
                                         <li><a href="#headphone" className="nav-link">هدفون و هدست</a></li>
+                                        <li><a href="#hard" className="nav-link">هارد</a></li>
 
                                     </ul>
                                 </nav>
@@ -66,12 +67,13 @@ export default class Nav extends Component {
 
                     <div className="boxTitle d-flex flex-column">
                         <div className="boxForm d-flex flex-column justify-content-start align-items-start">
-                            <p>برای اینکه زودتر از همه از تخفیف ها با خبر شید فرم زیر را پر کنید !</p>
+                            <p>برای اینکه زودتر از بقیه از تخفیف ها با خبردار بشی این فرم رو پر کن !</p>
                             <div className='d-flex'>
                                 <input className='form-control' type="text" name='tel' placeholder='شماره موبایل خودرا وارد کنید' onChange={e => this.setState({ tel: e.target.value })} />
                                 <button className='btn btn-primary' onClick={() => {
                                     let formData = new FormData();
                                     formData.append("tel", this.state.tel);
+                                    formData.append("source", 'luxuryDad');
                                    
                                     axios.post('https://etebarkala.com/black-friday/index.php', formData)
                                         .then((response) => {
@@ -91,7 +93,7 @@ export default class Nav extends Component {
                                 }}>ثبت</button>
                             </div>
                         </div>
-                        <p>برای دیدن محصولات ویژه روز پدر صفحه را اسکرول کنید</p>
+                        <p>برای دیدن محصولات ویژه پدران لاکچری صفحه را اسکرول کنید</p>
                         <div class="aroowDown">
                             <div class="chevron"></div>
                             <div class="chevron"></div>
