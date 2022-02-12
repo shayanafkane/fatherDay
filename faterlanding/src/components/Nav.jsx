@@ -66,39 +66,15 @@ export default class Nav extends Component {
                     </div>
 
                     <div className="boxTitle d-flex flex-column">
-                        <div className="boxForm d-flex flex-column justify-content-start align-items-start">
-                            <p>برای اینکه زودتر از بقیه از تخفیف ها با خبردار بشی این فرم رو پر کن !</p>
-                            <div className='d-flex'>
-                                <input className='form-control' type="text" name='tel' placeholder='شماره موبایل خودرا وارد کنید' onChange={e => this.setState({ tel: e.target.value })} />
-                                <button className='btn btn-primary' onClick={() => {
-                                    let formData = new FormData();
-                                    formData.append("tel", this.state.tel);
-                                    formData.append("source", 'luxuryDad');
-                                   
-                                    axios.post('https://etebarkala.com/black-friday/index.php', formData)
-                                        .then((response) => {
-                                            console.log(response.data);
-                                            if (response.data.result == true) {
-                                                toast.success("اطلاعات شما با موفقیت ثبت شد");
-                                                this.state.disabled = false;
 
-                                            } else if (response.data.result == false) {
-                                                toast.error("شماره موبایل اشتباه وارد شده است");
-                                                this.state.disabled = false;
-                                            } else if (response.data.result == "duplicate") {
-                                                toast.error("شماره موبایل وارد شده تکراری است");
-                                                this.state.disabled = false;
-                                            }
-                                        })
-                                }}>ثبت</button>
-                            </div>
-                        </div>
                         <p>برای دیدن محصولات ویژه پدران لاکچری صفحه را اسکرول کنید</p>
-                        <div class="aroowDown">
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
-                        </div>
+                        <a href="#phone">
+                            <div class="aroowDown">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </>
