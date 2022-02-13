@@ -25,8 +25,9 @@ export default class Main extends Component {
                 }
             })
                 .then(response => {
-               
+
                     this.setState({ mobile: response.data })
+
                 })
                 .finally(() => {
                     this.setState({ loadingMobile: false })
@@ -41,7 +42,7 @@ export default class Main extends Component {
                 }
             })
                 .then(response => {
-            
+
                     this.setState({ smartWatch: response.data })
                 })
                 .finally(() => {
@@ -58,7 +59,7 @@ export default class Main extends Component {
                 }
             })
                 .then(response => {
-                  
+
                     this.setState({ headphone: response.data })
                 })
                 .finally(() => {
@@ -74,7 +75,7 @@ export default class Main extends Component {
                 }
             })
                 .then(response => {
-                    
+
                     this.setState({ hard: response.data })
                 })
                 .finally(() => {
@@ -95,15 +96,30 @@ export default class Main extends Component {
                     <hr className='hrCustom' />
                     {this.state.loadingMobile == true &&
                         <div class="loader">Loading...</div>
-
                     }
-                    <div className="row">
+                    <div className="row justify-content-center">
 
                         {this.state.mobile.map(mobile => {
+
                             return (
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="product">
+
                                         <a href={mobile.permalink}>
+                                            {
+                                                mobile.meta_data.map(fast => {
+                                                    console.log(fast.key);
+                                                    return (
+                                                        <div className="fastBadge">
+                                                            {fast.key == 'fast_delivery' &&
+                                                                <a href="https://etebarkala.com/landing/fast-delivery/">
+                                                                    <img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1644736927/fd1_iqxsni.png" alt="" />
+                                                                </a>
+                                                            }
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                             <img src={mobile.images[0].src} className='imageProduct' alt="" />
                                             <p className='px-2'>{mobile.name}
                                             </p>
@@ -126,12 +142,26 @@ export default class Main extends Component {
                         <div class="loader">Loading...</div>
 
                     }
-                    <div className="row">
+                    <div className="row justify-content-center">
                         {this.state.smartWatch.map(smart => {
                             return (
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="product">
                                         <a href={smart.permalink}>
+                                            {
+                                                smart.meta_data.map(fast => {
+                                                    console.log(fast.key);
+                                                    return (
+                                                        <div className="fastBadge">
+                                                            {fast.key == 'fast_delivery' &&
+                                                                <a href="https://etebarkala.com/landing/fast-delivery/">
+                                                                    <img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1644736927/fd1_iqxsni.png" alt="" />
+                                                                </a>
+                                                            }
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                             <img src={smart.images[0].src} className='imageProduct' alt="" />
                                             <p className='px-2'>{smart.name}
                                             </p>
@@ -153,12 +183,26 @@ export default class Main extends Component {
                         <div class="loader">Loading...</div>
 
                     }
-                    <div className="row">
+                    <div className="row justify-content-center">
                         {this.state.headphone.map(headphone => {
                             return (
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="product">
                                         <a href={headphone.permalink}>
+                                            {
+                                                headphone.meta_data.map(fast => {
+
+                                                    return (
+                                                        <div className="fastBadge">
+                                                            {fast.key == 'fast_delivery' &&
+                                                                <a href="https://etebarkala.com/landing/fast-delivery/">
+                                                                    <img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1644736927/fd1_iqxsni.png" alt="" />
+                                                                </a>
+                                                            }
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                             <img src={headphone.images[0].src} className='imageProduct' alt="" />
                                             <p className='px-2'>{headphone.name}
                                             </p>
@@ -181,12 +225,26 @@ export default class Main extends Component {
                         <div class="loader">Loading...</div>
 
                     }
-                    <div className="row">
+                    <div className="row justify-content-center">
                         {this.state.hard.map(hard => {
                             return (
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="product">
                                         <a href={hard.permalink}>
+                                            {
+                                                hard.meta_data.map(fast => {
+
+                                                    return (
+                                                        <div className="fastBadge">
+                                                            {fast.key == 'fast_delivery' &&
+                                                                <a href="https://etebarkala.com/landing/fast-delivery/">
+                                                                    <img src="https://res.cloudinary.com/dpzrxnav1/image/upload/v1644736927/fd1_iqxsni.png" alt="" />
+                                                                </a>
+                                                            }
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                             <img src={hard.images[0].src} className='imageProduct' alt="" />
                                             <p className='px-2'>{hard.name}
                                             </p>
